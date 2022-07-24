@@ -1,0 +1,90 @@
+<h1>Create New Product</h1>
+<div class="form-container">
+  <div class="form-box">
+    <p>
+      <mat-form-field class="input" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="model.name" [value]="model.name" placeholder="Item's Name">
+        <mat-hint>Item Name</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <div *ngIf="isNumberLoading"
+           style="display: flex; justify-content: center; align-items: center; background: white;">
+        <mat-progress-spinner
+          color="primary"
+          mode="indeterminate">
+        </mat-progress-spinner>
+      </div>
+      <div *ngIf="!isNumberLoading">
+      <mat-form-field class="input" appearance="outline">
+        <mat-label>Sku</mat-label>
+        <input matInput disabled [(ngModel)]="model.number" [value]="model.number" placeholder="Item's Sku Number">
+        <mat-hint>Item Sku</mat-hint>
+      </mat-form-field>
+      </div>
+  </div>
+  <div class="form-box">
+<!--    Horizontal-->
+    <p>
+      <mat-form-field class="input" appearance="outline">
+        <mat-label>Cost</mat-label>
+        <input [disabled]="inheritsPrice" matInput [(ngModel)]="model.cost" type="number" placeholder="Cost">
+        <mat-hint>Buying Price</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="input" appearance="outline">
+        <mat-label>Price</mat-label>
+        <input [disabled]="inheritsPrice" matInput [(ngModel)]="model.price" type="number" placeholder="Price">
+        <mat-hint>Sell Price</mat-hint>
+      </mat-form-field>
+    </p>
+  </div>
+  <p>
+    <mat-form-field class="input" appearance="outline">
+      <mat-label>Description</mat-label>
+      <textarea matInput [(ngModel)]="model.description" type="number" placeholder="Description"></textarea>
+      <mat-hint>A description of the product</mat-hint>
+    </mat-form-field>
+  </p>
+  <div class="form-box">
+    <mat-form-field class="input" appearance="outline">
+      <mat-label>Category</mat-label>
+      <mat-select [(value)]="model.category">
+        <mat-option *ngFor="let cat of categories" (onSelectionChange)="categoryChanged()" [value]="cat.name">
+          {{cat.display_name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="input" appearance="outline">
+      <mat-label>Class</mat-label>
+      <mat-select [(value)]="model.class">
+        <mat-option (onSelectionChange)="classChanged()" *ngFor="let prodClass of classes" [value]="prodClass.name">
+          {{prodClass.display_name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="form-box">
+    <mat-form-field class="input" appearance="outline">
+      <mat-label>Barcode Single</mat-label>
+      <input matInput [(ngModel)]="model.barcode_ea" [value]="model.barcode_ea" placeholder="">
+      <mat-hint>Barcode for singular item</mat-hint>
+    </mat-form-field>
+    <mat-form-field class="input" appearance="outline">
+      <mat-label>Barcode Box</mat-label>
+      <input matInput [(ngModel)]="model.barcode_box" [value]="model.barcode_box" placeholder="">
+      <mat-hint>Barcode for box of item</mat-hint>
+    </mat-form-field>
+    <mat-form-field class="input" appearance="outline">
+      <mat-label>Barcode Case</mat-label>
+      <input matInput [(ngModel)]="model.barcode_case" [value]="model.barcode_case" placeholder="">
+      <mat-hint>Barcode for case of item</mat-hint>
+    </mat-form-field>
+  </div>
+  <div class="form-box">
+    <button mat-raised-button (click)="submit()" color="primary">Submit</button>
+    <button mat-raised-button (click)="cancelForm()" color="warn">Cancel</button>
+  </div>
+</div>

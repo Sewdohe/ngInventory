@@ -1,0 +1,27 @@
+<!-- <div *ngIf="auth.user | async as user; else showLogin"> -->
+<!--   <h1>Hello {{ user.displayName }}!</h1> -->
+<!--   <button (click)="logout()">Logout</button> -->
+<!-- </div> -->
+<!-- <ng-template #showLogin> -->
+<!--   <button (click)="login()">Login</button> -->
+<!-- </ng-template> -->
+
+<div class="form-container">
+  <p>
+    <mat-form-field class="input" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="userEmail" [value]="" placeholder="sewdohe@protonmail.com">
+      <mat-hint>Email</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="input" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput [(ngModel)]="userPassword" [value]="userPassword" type="password" placeholder="">
+      <mat-hint>Email</mat-hint>
+    </mat-form-field>
+  </p>
+  <div class="form-box">
+    <button mat-raised-button (click)="login()" color="primary">Submit</button>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+[12:48:14.171] Global cache location '/home/sewdohe/.cache/typescript/4.7', safe file path '/home/sewdohe/.nvm/versions/node/v16.14.2/lib/node_modules/typescript/lib/typingSafeList.json', types map path /home/sewdohe/.nvm/versions/node/v16.14.2/lib/node_modules/typescript/lib/typesMap.json
+[12:48:14.171] Processing cache location '/home/sewdohe/.cache/typescript/4.7'
+[12:48:14.171] Trying to find '/home/sewdohe/.cache/typescript/4.7/package.json'...
+[12:48:14.172] Loaded content of '/home/sewdohe/.cache/typescript/4.7/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.601"}}
+[12:48:14.172] Loaded content of '/home/sewdohe/.cache/typescript/4.7/package-lock.json'
+[12:48:14.172] Finished processing cache location '/home/sewdohe/.cache/typescript/4.7'
+[12:48:14.172] Process id: 11996
+[12:48:14.172] NPM location: /home/sewdohe/.nvm/versions/node/v16.14.2/bin/npm (explicit '--npmLocation' not  provided)
+[12:48:14.172] validateDefaultNpmLocation: false
+[12:48:14.172] Npm config file: /home/sewdohe/.cache/typescript/4.7/package.json
+[12:48:14.173] Updating types-registry npm package...
+[12:48:14.173] Exec: /home/sewdohe/.nvm/versions/node/v16.14.2/bin/npm install --ignore-scripts types-registry@latest
+[12:48:14.968]     Succeeded. stdout:
+    
+    up to date, audited 2 packages in 696ms
+
+found 0 vulnerabilities
+
+[12:48:14.968] Updated types-registry npm package

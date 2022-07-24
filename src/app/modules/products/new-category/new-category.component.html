@@ -1,0 +1,28 @@
+<h1>Create New Category</h1>
+<div class="form-container">
+  <div class="form-box">
+    <p>
+      <mat-form-field class="input" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="model.name" placeholder="Item's Name as reported">
+        <mat-hint>Category Name (as reported)</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="input" appearance="outline">
+        <mat-label>Display Name</mat-label>
+        <input matInput [(ngModel)]="model.display_name" placeholder="Readable name">
+        <mat-hint>Easy to read name</mat-hint>
+      </mat-form-field>
+    </p>
+  </div>
+  <p>
+    <mat-form-field class="input" appearance="outline">
+      <mat-label>Tax Group</mat-label>
+      <input matInput [(ngModel)]="model.tax_group" placeholder="Cost">
+      <mat-hint>Tax group the item falls under</mat-hint>
+    </mat-form-field>
+  </p>
+  <div class="form-box">
+    <button mat-raised-button (click)="submit()" color="primary">Submit</button>
+    <button mat-raised-button color="warn">Cancel</button>
+  </div>
+</div>

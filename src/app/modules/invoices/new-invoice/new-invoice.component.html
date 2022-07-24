@@ -1,0 +1,20 @@
+<h1>New Invoice</h1>
+<div class="form-container">
+  <p>
+    <mat-form-field class="input" appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="barCodeInput" [value]="barCodeInput" placeholder="scan a barcode">
+      <mat-hint>Item Name</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="input" appearance="outline">
+      <mat-label>Quantity</mat-label>
+      <input type="number" matInput [(ngModel)]="qty" [value]="qty">
+      <mat-hint>Amount</mat-hint>
+    </mat-form-field>
+  </p>
+  <div class="form-box">
+    <button mat-raised-button (click)="doSometing()" color="primary">Submit</button>
+</div>
+<app-invoice-view></app-invoice-view>

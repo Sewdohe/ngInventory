@@ -1,0 +1,53 @@
+<h1>Create New Category</h1>
+<div class="form-container">
+  <div class="form-box">
+    <p>
+      <mat-form-field class="input" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="model.name" placeholder="Item's Name as reported">
+        <mat-hint>Category Name (as reported)</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="input" appearance="outline">
+        <mat-label>Display Name</mat-label>
+        <input matInput [(ngModel)]="model.display_name" placeholder="Readable name">
+        <mat-hint>Easy to read name</mat-hint>
+      </mat-form-field>
+    </p>
+  </div>
+  <div class="form-box">
+    <p>
+      <mat-form-field class="input" appearance="outline">
+        <mat-label>Class Cost</mat-label>
+        <span matPrefix>$&nbsp;</span>
+        <input [disabled]="!model.inherits_price" matInput [(ngModel)]="model.class_cost" placeholder="What you pay for the item">
+        <mat-hint>Item buying price</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="input" appearance="outline">
+        <mat-label>Class Price</mat-label>
+        <span matPrefix>$&nbsp;</span>
+        <input [disabled]="!model.inherits_price" matInput [(ngModel)]="model.class_price" placeholder="What you sell the item for">
+        <mat-hint>Item selling price</mat-hint>
+      </mat-form-field>
+    </p>
+  </div>
+  <p>
+    <mat-form-field class="input" appearance="outline">
+      <mat-label>Category</mat-label>
+      <mat-select matTooltip="Category the class belongs to" [(value)]="model.category">
+        <mat-option (onSelectionChange)="categoryChanged()" *ngFor="let cat of categories" [value]="cat.name">
+          {{cat.display_name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+  <p>
+      <mat-slide-toggle matTooltip="Causes the items in the class to inherit the class price"
+                        [(ngModel)]="model.inherits_price">Inherit Class Price</mat-slide-toggle>
+  </p>
+  <div class="form-box">
+    <button mat-raised-button (click)="submit()" color="primary">Submit</button>
+    <button mat-raised-button color="warn">Cancel</button>
+  </div>
+</div>

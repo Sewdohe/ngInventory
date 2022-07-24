@@ -1,0 +1,63 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport disableClose="false"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-nav-list>
+      <h3 matSubheader>Manage</h3>
+      <mat-list-item>
+        <mat-icon matListIcon>inventory_2</mat-icon>
+        <a mat-list-item routerLink="products">Products</a>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListIcon>receipt_long</mat-icon>
+        <a mat-list-item routerLink="invoices">Invoices</a>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListIcon>support_agent</mat-icon>
+        <a mat-list-item routerLink="">Customers</a>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListIcon>payments</mat-icon>
+        <a mat-list-item routerLink="">Payments</a>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListIcon>sync_alt</mat-icon>
+        <a mat-list-item routerLink="">Reporting</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <h3 matSubheader>Quick Link</h3>
+      <mat-list-item>
+        <mat-icon matListIcon>dashboard</mat-icon>
+        <a mat-list-item routerLink="">Dashboard</a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+<!--    <mat-toolbar color="primary">-->
+      <mat-toolbar *ngIf="isHandset$ | async">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="spacer"></span>
+      <span class="app-name">ngInventory</span>
+      <span class="spacer"></span>
+
+      <div *ngIf="auth.user | async as user; else showLogin">
+        <span>Hello {{ user.email }}!</span>
+        <button color="warn" (click)="logout()">Logout</button>
+      </div>
+      <ng-template #showLogin>
+        <button [disabled]="userAuthed" (click)="openLoginDialog()" mat-stroked-button>Login</button>
+      </ng-template>
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

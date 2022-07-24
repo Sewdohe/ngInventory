@@ -1,0 +1,9 @@
+<h1>Invoice Management</h1>
+<div class="content">
+  <div class="button-group">
+    <button mat-button (middleclick)="openWindow('invoices/new-invoice')" (click)="$event.button == 1 ? null : navigateSomewhere('invoices/new-invoice')" color="primary"><mat-icon>add</mat-icon>  New Invoice</button>
+  </div>
+  <mat-divider></mat-divider>
+  <h2>Manage</h2>
+  <button matTooltip="coming soon..."  mat-button routerLink="view" color="primary"><mat-icon>visibility</mat-icon> Invoices</button>
+</div>

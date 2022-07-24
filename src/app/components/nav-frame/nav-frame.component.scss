@@ -1,0 +1,38 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.app-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 10vh;
+  max-height: 60px;
+  min-height: 40px;
+}
+
+.content {
+  height: 90vh;
+}
+
+.mat-toolbar {
+  position: relative;
+  top: 0;
+}

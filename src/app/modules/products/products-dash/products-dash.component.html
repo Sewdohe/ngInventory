@@ -1,0 +1,11 @@
+<h1>Product Management</h1>
+<div class="content">
+  <div class="button-group">
+    <button mat-button (middleclick)="openNewItemWindow()" (click)="$event.button == 1 ? null : navigateSomewhere('products/new-product')" color="primary"><mat-icon>add</mat-icon>  New Product</button>
+    <button mat-button (middleclick)="openWindow('products/new-class')" (click)="$event.button == 1 ? null : navigateSomewhere('products/new-class')" color="primary"><mat-icon>add</mat-icon>  New Class</button>
+    <button mat-button (middleclick)="openWindow('products/new-category')" (click)="$event.button == 1 ? null : navigateSomewhere('products/new-category')" color="primary"><mat-icon>add</mat-icon>  New Category</button>
+  </div>
+  <mat-divider></mat-divider>
+  <h2>Manage</h2>
+  <button mat-button (middleclick)="openWindow('products/view')" (click)="$event.button == 1 ? null : navigateSomewhere('products/view')" color="primary"><mat-icon>visibility</mat-icon>  Products</button>
+</div>

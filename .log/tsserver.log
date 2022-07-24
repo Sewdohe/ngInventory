@@ -1,0 +1,83 @@
+Info 0    [16:13:21.359] Starting TS Server
+Info 1    [16:13:21.360] Version: 4.7.4
+Info 2    [16:13:21.360] Arguments: /home/sewdohe/.nvm/versions/node/v16.14.2/bin/node /home/sewdohe/.nvm/versions/node/v16.14.2/lib/node_modules/typescript/lib/tsserver.js --logFile /home/sewdohe/Prog/ngInventory/.log/tsserver.log --logVerbosity info --cancellationPipeName /tmp/ea170a35135f2a58dfdd2b73bb25fece/tscancellation*
+Info 3    [16:13:21.360] Platform: linux NodeVersion: 16 CaseSensitive: true
+Info 4    [16:13:21.360] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
+Info 5    [16:13:21.372] Format host information updated
+Info 6    [16:13:21.418] Search path: /home/sewdohe/Prog/ngInventory/src/app
+Info 7    [16:13:21.419] For info: /home/sewdohe/Prog/ngInventory/src/app/app.component.ts :: Config file name: /home/sewdohe/Prog/ngInventory/tsconfig.json
+Info 8    [16:13:21.419] Creating configuration project /home/sewdohe/Prog/ngInventory/tsconfig.json
+Info 9    [16:13:21.530] Config: /home/sewdohe/Prog/ngInventory/tsconfig.json : {
+ "rootNames": [
+  "/home/sewdohe/Prog/ngInventory/src/main.ts",
+  "/home/sewdohe/Prog/ngInventory/src/polyfills.ts",
+  "/home/sewdohe/Prog/ngInventory/src/test.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/app-routing.module.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/app.component.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/app.module.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/auth.service.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/components/login/login.component.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/components/nav-frame/nav-frame.component.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/dashboard/dashboard.component.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/directives/middleclick.directive.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/interfaces/category.interface.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/interfaces/class.interface.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/interfaces/invoice.interface.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/interfaces/product.interface.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/modules/customers/customers.module.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/modules/invoices/invoices.module.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/modules/invoices/invoice-dashboard/invoice-dashboard.component.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/modules/invoices/new-invoice/new-invoice.component.spec.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/modules/invoices/new-invoice/new-invoice.component.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/modules/products/products.module.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/modules/products/new-category/new-category.component.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/modules/products/new-class/new-class.component.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/modules/products/new-product/new-product.component.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/modules/products/product-table/product-table.component.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/modules/products/products-dash/products-dash.component.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/modules/shared/shared.module.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/modules/transaction/transaction.module.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/services/data.service.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/services/invoice.service.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/services/toast.service.ts",
+  "/home/sewdohe/Prog/ngInventory/src/app/services/window.service.ts",
+  "/home/sewdohe/Prog/ngInventory/src/environments/environment.prod.ts",
+  "/home/sewdohe/Prog/ngInventory/src/environments/environment.ts"
+ ],
+ "options": {
+  "baseUrl": "/home/sewdohe/Prog/ngInventory",
+  "outDir": "/home/sewdohe/Prog/ngInventory/dist/out-tsc",
+  "forceConsistentCasingInFileNames": true,
+  "strict": true,
+  "noImplicitOverride": true,
+  "noPropertyAccessFromIndexSignature": true,
+  "noImplicitReturns": true,
+  "noFallthroughCasesInSwitch": true,
+  "sourceMap": true,
+  "declaration": false,
+  "downlevelIteration": true,
+  "experimentalDecorators": true,
+  "moduleResolution": 2,
+  "importHelpers": true,
+  "target": 7,
+  "module": 6,
+  "lib": [
+   "lib.es2020.d.ts",
+   "lib.dom.d.ts"
+  ],
+  "configFilePath": "/home/sewdohe/Prog/ngInventory/tsconfig.json"
+ }
+}
+Info 10   [16:13:21.830] Starting updateGraphWorker: Project: /home/sewdohe/Prog/ngInventory/tsconfig.json
+Info 11   [16:13:23.710] Finishing updateGraphWorker: Project: /home/sewdohe/Prog/ngInventory/tsconfig.json Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 1879.6692349985242ms
+Info 12   [16:13:23.710] Project '/home/sewdohe/Prog/ngInventory/tsconfig.json' (Configured)
+Info 13   [16:13:23.710] 	Files (532)
+
+Info 14   [16:13:23.710] -----------------------------------------------
+Info 15   [16:13:23.730] AutoImportProviderProject: found 4 root files in 4 dependencies in 17.12804799899459 ms
+Info 16   [16:13:23.731] Starting updateGraphWorker: Project: /dev/null/autoImportProviderProject1*
+Info 17   [16:13:23.821] Finishing updateGraphWorker: Project: /dev/null/autoImportProviderProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 89.84425000101328ms
+Info 18   [16:13:23.821] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
+Info 19   [16:13:23.821] 	Files (284)
+
+Info 20   [16:13:23.821] -----------------------------------------------
